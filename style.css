@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {margin: 0; padding: 0;}
+body {
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    min-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.main-img {
+    width: 800px;
+    height: 302px;
+}
+
+.main-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+    object-position: 0;
+}
+
+.container {
+    display: flex;
+    width: 720px;
+    background-color: #fff;
+    margin: 0 8rem;
+    border-radius: 10px;
+    height: 302px;
+}
+
+.text {
+    padding: 2rem;
+}
+
+.text h1 {
+    font-size: 21px;
+    max-width: auto;
+    padding-bottom: 1rem;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.text p {
+    font-size: 13px;
+    max-width: auto;
+    color: var(--Desaturated-Dark-Blue);
+    line-height: 1.3rem;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: 13px;
+}
+
+.avatar {
+    width: 10%;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.name-date {
+    margin-left: -8rem;
+}
+
+.name-date .name {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: bold;
+    padding-bottom: 0.2rem;
+}
+
+.name-date .date {
+    color: var(--Grayish-Blue);
+}
+
+.share {
+    background-color: var(--Light-Grayish-Blue);
+    color: var(--Desaturated-Dark-Blue);
+    padding: .4rem .5rem;
+    border-radius: 50%;
+}
+
+.share:hover {
+    background-color: var(--Desaturated-Dark-Blue);
+    color: var(--Light-Grayish-Blue);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.active {
+    position: absolute;
+    left: 60rem;
+    top: 20.5rem;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    left: 43%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid var(--Very-Dark-Grayish-Blue);
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+.share-active {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    font-size: 13px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    width: 200px;
+    border-radius: 10px;
+}
+
+.share-text {
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+    letter-spacing: .4rem;
+}
+
+.sm-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sm-icons figure:hover {
+    scale: 1.2;
+    transition: 0.2s;
+}
+
+.share-active-icon {
+    background-color: var(--Desaturated-Dark-Blue);
+    color: var(--Light-Grayish-Blue);
+    padding: .4rem .5rem;
+    border-radius: 50%;
+}
+
+.icon-hidden {
+    display: none;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+/* Responsiveness */ 
+
+/* Smaller Laptop */
+@media screen and (max-width: 1400px) {
+    body {
+        min-width: 1000px;
+        max-width: 1400px;
+    }
+
+    .active {
+        position: absolute;
+        left: 52rem;
+        top: 21.5rem;
+    }
+
+}
+
+/* Tablets */
+@media screen and (max-width: 900px) {
+    body {
+        min-width: 836px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .active {
+        position: absolute;
+        left: 39.7rem;
+        top: 30rem;
+    }
+
+}
+
+@media screen and (max-width: 835px) {
+    body {
+        min-width: 822px;
+        max-width: 835px;
+        margin: auto;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .active {
+        position: absolute;
+        left: 38rem;
+        top: 32.5rem;
+    }
+
+}
+
+@media screen and (max-width: 821px) {
+    body {
+        min-width: 770px;
+        max-width: 821px;
+        margin: auto;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .active {
+        position: absolute;
+        left: 37.8rem;
+        top: 32rem;
+    }
+
+    .sm-icons img {
+        width: 15px;
+    }
+
+}
+
+@media screen and (max-width: 801px) {
+    body {
+        min-width: 790px;
+        max-width: 801px;
+        margin: auto;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .active {
+        position: absolute;
+        left: 37rem;
+        top: 35.5rem;
+    }
+
+    .sm-icons img {
+        width: 15px;
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+    body {
+        min-width: 750px;
+        max-width: 769px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: 75%;
+        height: 556px;
+    }
+
+    .main-img {
+        width: auto;
+        height: 250px;
+    }
+    
+    .main-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+        object-position: 0;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .text h1 {
+        font-size: 24px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        font-size: 15px;
+    }
+
+    .name-date {
+        margin-left: -16rem;
+    }
+
+    .active {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .active::after {
+        display: none;
+    }
+
+    .share-active {
+        border-radius: 0 0 10px 10px;
+        width: auto;
+        padding: 1rem 2rem;
+        height: 2rem;
+        justify-content: space-between;
+    }
+
+    .sm-icons {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        padding: 0;
+    }
+
+    .sm-icons img {
+        width: 25px;
+    }
+
+    .icon-hidden {
+        display: block;
+    }
+
+    .share-active-icon:hover {
+        background-color: var(--Light-Grayish-Blue);
+        color: var(--Desaturated-Dark-Blue);
+        padding: .4rem .5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    footer {
+        font-size: 13px;
+        margin: auto;
+    }
+}
+
+/* Mobiles */
+@media screen and (max-width: 428px) {
+    body {
+        min-width: 395px;
+        max-width: 428px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: auto;
+        height: 582px;
+    }
+
+    .main-img {
+        width: auto;
+        height: 200px;
+    }
+    
+    .main-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+        object-position: 0;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        font-size: 13px;
+    }
+
+    .name-date {
+        margin-left: -6rem;
+    }
+
+    .active {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .active::after {
+        display: none;
+    }
+
+    .share-active {
+        border-radius: 0 0 10px 10px;
+        width: auto;
+        padding: 1.5rem 2rem;
+        height: 2rem;
+    }
+
+    .icon-hidden {
+        display: block;
+    }
+
+    .sm-icons {
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .sm-icons img {
+        width: 20px;
+    }
+
+    .share-active-icon:hover {
+        background-color: var(--Light-Grayish-Blue);
+        color: var(--Desaturated-Dark-Blue);
+        padding: .4rem .5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    footer {
+        font-size: 13px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    body {
+        min-width: 377px;
+        max-width: 394px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: auto;
+        height: 582x;
+    }
+
+    .main-img {
+        width: auto;
+        height: 200px;
+    }
+    
+    .main-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+        object-position: 0;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .text h1 {
+        font-size: 22px;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        font-size: 13px;
+    }
+
+    .name-date {
+        margin-left: -4rem;
+    }
+
+    .active {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .active::after {
+        display: none;
+    }
+
+    .share-active {
+        border-radius: 0 0 10px 10px;
+        width: auto;
+        padding: 1.5rem 2rem;
+        height: 2rem;
+    }
+
+    .sm-icons {
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .sm-icons img {
+        width: 20px;
+    }
+
+    .icon-hidden {
+        display: block;
+    }
+
+    .share-active-icon:hover {
+        background-color: var(--Light-Grayish-Blue);
+        color: var(--Desaturated-Dark-Blue);
+        padding: .4rem .5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    footer {
+        font-size: 13px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        min-width: 362px;
+        max-width: 376x;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: auto;
+        height: 582px;
+    }
+
+    .main-img {
+        width: auto;
+        height: 200px;
+    }
+    
+    .main-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+        object-position: 0;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .text h1 {
+        font-size: 19px;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        font-size: 13px;
+    }
+
+    .name-date {
+        margin-left: -3rem;
+    }
+
+    .active {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .active::after {
+        display: none;
+    }
+
+    .share-active {
+        border-radius: 0 0 10px 10px;
+        width: auto;
+        padding: 1.5rem 2rem;
+        height: 2rem;
+    }
+
+    .sm-icons {
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .sm-icons img {
+        width: 20px;
+    }
+
+    .icon-hidden {
+        display: block;
+    }
+
+    .share-active-icon:hover {
+        background-color: var(--Light-Grayish-Blue);
+        color: var(--Desaturated-Dark-Blue);
+        padding: .4rem .5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    footer {
+        font-size: 13px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    body {
+        min-width: 322px;
+        max-width: 361x;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: auto;
+        height: 582px;
+    }
+
+    .main-img {
+        width: auto;
+        height: 200px;
+    }
+
+    .text h1 {
+        font-size: 19px;
+    }
+    
+    .main-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+        object-position: 0;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        font-size: 13px;
+    }
+
+    .name-date {
+        margin-left: -3rem;
+    }
+
+    .active {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .active::after {
+        display: none;
+    }
+
+    .share-active {
+        border-radius: 0 0 10px 10px;
+        width: auto;
+        padding: 1.5rem 2rem;
+        height: 2rem;
+    }
+
+    .sm-icons {
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .sm-icons img {
+        width: 20px;
+    }
+
+    .icon-hidden {
+        display: block;
+    }
+
+    .share-active-icon:hover {
+        background-color: var(--Light-Grayish-Blue);
+        color: var(--Desaturated-Dark-Blue);
+        padding: .4rem .5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    footer {
+        font-size: 13px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    body {
+        min-width: 300px;
+        max-width: 321x;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: auto;
+        height: 548px;
+    }
+
+    .main-img {
+        width: auto;
+        height: 200px;
+    }
+
+    .text h1 {
+        font-size: 16px;
+    }
+
+    .text p {
+        font-size: 12px;
+    }
+    
+    .main-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+        object-position: 0;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        font-size: 13px;
+    }
+
+    .name-date {
+        margin-left: -2rem;
+        font-size: 11px;
+    }
+
+    .active {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .active::after {
+        display: none;
+    }
+
+    .share-active {
+        border-radius: 0 0 10px 10px;
+        width: auto;
+        padding: 1.5rem 2rem;
+        height: 2rem;
+        font-size: 11px;
+    }
+
+    .sm-icons {
+        gap: .6rem;
+        padding: 0;
+        font-size: 11px;
+    }
+
+    .sm-icons img {
+        width: 15px;
+    }
+
+    .icon-hidden {
+        display: block;
+    }
+
+    .share-active-icon:hover {
+        background-color: var(--Light-Grayish-Blue);
+        color: var(--Desaturated-Dark-Blue);
+        padding: .4rem .5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    footer {
+        font-size: 11px;
+        margin: auto;
+    }
+}
